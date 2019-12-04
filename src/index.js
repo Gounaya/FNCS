@@ -2,4 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import UserPanel from './UserPanel';
 
-ReactDOM.render(React.createElement(UserPanel,{}, null), document.getElementById('root'));
+function App(){
+
+    return (
+        <>
+            <UserPanel/>
+        </>
+    )
+
+}
+ReactDOM.render(<App/>, document.getElementById('root'));
+
+//ReactDOM.render(React.createElement(UserPanel,{}, null), document.getElementById('root'));
