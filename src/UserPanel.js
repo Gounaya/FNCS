@@ -11,9 +11,9 @@ export default class UserPanel extends React.Component {
   
        return (
        <div>
-           <p style={{color: 'red'}}>First Name: {this.props.firstName}</p>
+           <p className="red">First Name: {this.props.firstName}</p>
            <p style={{color: 'blue'}}>Last Name: {this.props.lastName}</p>
-           <p style={{color: 'green'}}>Email: {this.props.email}</p>
+           <p className="green">Email: {this.props.email}</p>
            <img src={"https://www.gravatar.com/avatar/" + hash}/>
        </div>);
    }
