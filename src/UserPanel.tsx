@@ -1,9 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import md5 from 'md5';
+//import {md5} from "js-md5";
+import 'bootstrap/dist/css/bootstrap.css';
 
-export default class UserPanel extends React.Component {
-    constructor(props) {
+
+
+
+export default class UserPanel extends React.Component<any, any> {
+    static propTypes = {
+        firstName: PropTypes.string.isRequired,
+        lastName: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+    }
+    
+    static defaultProps = {
+        firstName: 'Oussama',
+        lastName: 'Gounaya',
+        email: 'o.gounaya@gmail.com'
+    }
+
+    constructor(props:any) {
         super(props);
     }
     render() {
@@ -20,14 +37,3 @@ export default class UserPanel extends React.Component {
 
 }
 
-UserPanel.propTypes = {
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-}
-
-UserPanel.defaultProps = {
-    firstName: 'Oussama',
-    lastName: 'Gounaya',
-    email: 'o.gounaya@gmail.com'
-}
